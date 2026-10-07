@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <title>TokenFree Connector</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <span class="brand">TF</span><span>TokenFree Connector</span
+        ><span class="preview">开发预览</span>
+      </header>
+      <section class="hero">
+        <div class="symbol">↗</div>
+        <h1>连接电脑，随处继续</h1>
+        <p>
+          在 TokenFreeChat 中继续你的 Codex 会话。<br />工作始终在这台电脑上执行。
+        </p>
+        <button id="connect">连接 TokenFreeChat</button>
+        <p id="hint" class="hint">首次连接时，在浏览器登录并确认账号即可。</p>
+        <div id="error" role="alert" hidden></div>
+        <div id="pairing" hidden>
+          <span>在浏览器输入配对码</span><strong id="code"></strong
+          ><small id="expiry"></small>
+          <p id="pairAccount"></p>
+        </div>
+      </section>
+      <section class="information">
+        <div><span>Codex 桌面</span><strong id="appState">检测中</strong></div>
+        <div>
+          <span>桌面会话连接</span><strong id="ipcState">检测中</strong>
+        </div>
+        <div>
+          <span>TokenFreeChat</span><strong id="serverState">未连接</strong>
+        </div>
+        <div>
+          <span>绑定账号</span><strong id="accountState">未绑定</strong>
+        </div>
+      </section>
+      <details class="more">
+        <summary>更多</summary>
+        <button id="browser" class="text-button">打开网站</button
+        ><button id="revoke" class="text-button" disabled>解绑账号</button
+        ><button id="diagnostics" class="text-button">导出诊断</button
+        ><button id="quit" class="text-button">退出应用</button>
+        <p>关闭窗口后保留在菜单栏。断开连接不会停止 Codex 任务。</p>
+      </details>
+      <footer>
+        连接到 TokenFreeChat 的桌面会话服务。<br />聊天通过服务端中转，服务端可读取内容；Codex
+        登录凭据留在本机。
+      </footer>
+    </main>
+    <script src="renderer.js"></script>
+  </body>
+</html>

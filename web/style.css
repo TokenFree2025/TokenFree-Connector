@@ -1,0 +1,251 @@
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #163346;
+  background: #f3f6f9;
+  font-size: 14px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+header {
+  background: #112c3b;
+  color: #eaf5f8;
+  padding: 22px 5%;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+header strong {
+  font-size: 21px;
+}
+header span {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #9bbbc7;
+}
+header small {
+  margin-left: auto;
+  color: #8fb7bc;
+}
+main {
+  max-width: 1300px;
+  margin: auto;
+  padding: 30px;
+}
+h1 {
+  font-size: 28px;
+  letter-spacing: -1px;
+}
+h2 {
+  font-size: 16px;
+}
+p {
+  color: #738896;
+  line-height: 1.6;
+}
+.panel {
+  background: #fff;
+  padding: 22px;
+  border: 1px solid #dfe7ed;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 20px;
+}
+.layout aside {
+  align-self: start;
+}
+.layout aside button {
+  white-space: normal;
+  text-align: left;
+}
+button {
+  font: inherit;
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 14px;
+  background: #127d76;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.secondary {
+  color: #355a69;
+  background: #eaf1f4;
+}
+.danger {
+  background: #f9eded;
+  color: #b34848;
+}
+input,
+select,
+textarea {
+  font: inherit;
+  padding: 10px;
+  border: 1px solid #d5e0e7;
+  border-radius: 6px;
+  background: #fafcfd;
+  color: #25495b;
+  max-width: 100%;
+}
+input {
+  margin: 6px;
+}
+#notice {
+  padding: 12px;
+  background: #e2f0ed;
+  border-radius: 7px;
+  margin: 20px 0;
+  color: #326d68;
+  overflow-wrap: anywhere;
+}
+#devices button,
+#sessions button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  background: #f0f5f7;
+  color: #254b5a;
+}
+.selected {
+  box-shadow: inset 3px 0 #117d76;
+}
+#deviceState {
+  font-size: 11px;
+  white-space: pre-line;
+}
+.chat-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5edf2;
+  padding-bottom: 18px;
+}
+.chat-head small {
+  font: 10px monospace;
+  color: #879da9;
+}
+#runtime {
+  font-size: 12px;
+  color: #517d87;
+  padding: 15px 0;
+}
+#history {
+  height: 420px;
+  overflow: auto;
+  overflow-wrap: anywhere;
+}
+.turn {
+  border-bottom: 1px solid #eef2f5;
+  padding: 8px 0;
+}
+.bubble {
+  padding: 14px;
+  border-radius: 8px;
+  margin: 8px 0;
+  white-space: pre-wrap;
+  line-height: 1.65;
+  font-size: 14px;
+}
+.bubble.user {
+  background: #edf4f5;
+}
+.bubble.assistant {
+  background: #f7f9fb;
+}
+.bubble.activity {
+  font-size: 11px;
+  color: #78909e;
+  padding: 5px 14px;
+}
+.bubble strong {
+  font-size: 10px;
+  color: #778f9b;
+  display: block;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+.turn-status {
+  font-size: 10px;
+  color: #94a6af;
+}
+#approvals:empty {
+  display: none;
+}
+.approval {
+  padding: 14px;
+  background: #fff8e9;
+  border: 1px solid #eed9a7;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+.approval pre {
+  white-space: pre-wrap;
+  max-height: 180px;
+  overflow: auto;
+  font-size: 12px;
+}
+.approval label {
+  display: block;
+  margin: 10px 0;
+}
+.approval input {
+  width: 95%;
+}
+.approval button {
+  margin: 4px;
+}
+textarea {
+  width: 100%;
+  min-height: 90px;
+  resize: vertical;
+  margin-top: 16px;
+}
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 12px;
+}
+.privacy {
+  font-size: 11px;
+}
+.top p {
+  margin-bottom: 8px;
+}
+#revoke {
+  margin-top: 25px;
+}
+@media (max-width: 760px) {
+  main {
+    padding: 16px;
+  }
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  header span {
+    display: none;
+  }
+  header {
+    padding: 20px;
+  }
+  .chat-head {
+    display: block;
+  }
+  .chat-head button {
+    margin-top: 10px;
+  }
+  #history {
+    height: 360px;
+  }
+}

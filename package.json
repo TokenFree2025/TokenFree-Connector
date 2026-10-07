@@ -1,0 +1,43 @@
+{
+  "name": "tokenfree-connector",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "tsx --test tests/*.test.ts",
+    "check": "npm run typecheck && npm run lint && npm test && npm run test:python",
+    "relay": "tsx src/relay/cli.ts",
+    "test:real": "tsx scripts/real-smoke.ts",
+    "start": "npm run build && electron .",
+    "test:python": "python3 -m unittest discover -s tests -p \"test_*.py\"",
+    "build:adapter": "bash scripts/build-adapter.sh",
+    "package": "npm run build && npm run build:adapter && node scripts/package.cjs",
+    "format": "prettier --write src tests scripts desktop web package.json tsconfig.json eslint.config.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.3",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@electron/packager": "^20.3.0",
+    "@eslint/js": "^9.37.0",
+    "@types/node": "^24.0.0",
+    "@types/ws": "^8.18.1",
+    "electron": "^44.6.0",
+    "eslint": "^9.37.0",
+    "globals": "^16.4.0",
+    "prettier": "^3.9.9",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.0"
+  },
+  "main": "desktop/main.cjs",
+  "description": "Desktop connector for the same live Codex desktop sessions",
+  "author": "TokenFree"
+}

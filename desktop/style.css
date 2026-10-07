@@ -1,0 +1,207 @@
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #203c48;
+  background: #f6f8fa;
+  font-size: 14px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+main {
+  max-width: 640px;
+  margin: auto;
+  padding: 28px 32px;
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 650;
+}
+.brand {
+  background: #167c76;
+  color: white;
+  padding: 9px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.preview {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 400;
+  color: #8a784e;
+  background: #f5eedf;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+.hero {
+  text-align: center;
+  padding: 28px 0 20px;
+}
+.symbol {
+  font-size: 32px;
+  color: #178980;
+  background: #e4f2ee;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  margin: auto;
+}
+h1 {
+  font-size: 27px;
+  margin: 20px 0 12px;
+  letter-spacing: -0.5px;
+}
+p {
+  line-height: 1.7;
+  color: #71848c;
+  font-size: 13px;
+}
+button {
+  font: inherit;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 18px;
+  cursor: pointer;
+  background: #167c76;
+  color: white;
+  font-weight: 600;
+}
+button:hover {
+  filter: brightness(0.96);
+}
+button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+#connect {
+  display: block;
+  margin: 24px auto 12px;
+  min-width: 230px;
+  padding: 14px 24px;
+  font-size: 15px;
+}
+.hint {
+  font-size: 12px;
+  min-height: 20px;
+}
+#pairing {
+  background: #edf5f2;
+  padding: 18px;
+  border-radius: 10px;
+}
+#pairing span,
+#pairing small {
+  display: block;
+  font-size: 12px;
+  color: #65827c;
+}
+#code {
+  display: block;
+  font-size: 30px;
+  letter-spacing: 7px;
+  color: #167c76;
+  margin: 12px 0;
+}
+.information {
+  border: 1px solid #e1e8eb;
+  border-radius: 12px;
+  background: white;
+  padding: 10px 20px;
+}
+.information div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px 0;
+  font-size: 13px;
+}
+.information span {
+  color: #74858f;
+}
+.information strong {
+  font-weight: 500;
+}
+.good {
+  color: #167c76;
+}
+details {
+  margin-top: 18px;
+  border-bottom: 1px solid #e2e9ed;
+  padding-bottom: 16px;
+}
+summary {
+  font-size: 13px;
+  cursor: pointer;
+  color: #627c88;
+}
+input {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #d9e4e8;
+  border-radius: 7px;
+  font: inherit;
+  background: white;
+}
+#sessions {
+  max-height: 230px;
+  overflow: auto;
+  margin: 12px 0;
+}
+.session {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #edf1f3;
+  font-size: 12px;
+}
+.session input {
+  width: auto;
+  align-self: flex-start;
+  margin-top: 2px;
+}
+.session span {
+  overflow-wrap: anywhere;
+}
+.session small {
+  display: block;
+  color: #8b9ba3;
+  margin-top: 4px;
+}
+.secondary {
+  background: #e9f0f2;
+  color: #375967;
+  font-size: 12px;
+}
+.text-button {
+  background: transparent;
+  color: #637d89;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 400;
+}
+.more button {
+  margin-top: 10px;
+}
+footer {
+  font-size: 10px;
+  line-height: 1.8;
+  color: #8e9da5;
+  text-align: center;
+  padding: 18px 0;
+}
+#error {
+  background: #faeaea;
+  color: #a84a4a;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  margin: 12px 0;
+}
+[hidden] {
+  display: none !important;
+}

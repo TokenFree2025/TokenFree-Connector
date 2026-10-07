@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TokenFree · Desktop relay lab</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <strong>TF / TokenFree</strong><span>DESKTOP RELAY LAB</span
+      ><small>开发验证 · 非生产服务</small>
+    </header>
+    <main>
+      <section class="top">
+        <h1>继续电脑上的同一个会话</h1>
+        <p>执行留在原环境。浏览器关闭不会取消任务。</p>
+        <div id="notice" role="status">正在连接开发 relay…</div>
+      </section>
+      <section id="loginPanel" class="panel">
+        <h2>开发测试身份</h2>
+        <p>仅回环开发环境，以下为模拟账号，不是 TokenFreeChat 登录。</p>
+        <select id="identity">
+          <option>alice</option>
+          <option>bob</option></select
+        ><button id="login">登录开发身份</button><span id="account"></span>
+      </section>
+      <section id="pairPanel" class="panel" hidden>
+        <h2>绑定这台电脑</h2>
+        <p>输入连接器上的配对码，再回到连接器本机确认账号。</p>
+        <input id="pairId" placeholder="配对 ID" /><input
+          id="code"
+          placeholder="8 位配对码"
+          maxlength="8"
+          inputmode="numeric"
+        /><button id="claim">确认账号</button>
+      </section>
+      <div class="layout">
+        <aside class="panel">
+          <h2>设备与会话</h2>
+          <button id="reload" class="secondary">刷新设备</button>
+          <div id="devices"></div>
+          <p id="deviceState"></p>
+          <div id="sessions"></div>
+          <button id="revoke" class="danger" disabled>撤销设备绑定</button>
+        </aside>
+        <section class="panel conversation">
+          <div class="chat-head">
+            <div>
+              <h2 id="title">选择已授权会话</h2>
+              <small id="sessionId">会话 ID 将在这里显示</small>
+            </div>
+            <button id="refresh" class="secondary" disabled>读取原会话</button>
+          </div>
+          <div id="runtime"></div>
+          <div id="history"></div>
+          <div id="approvals"></div>
+          <div id="compose">
+            <textarea
+              id="message"
+              placeholder="消息发送到这个桌面原会话"
+              disabled
+            ></textarea>
+            <div class="actions">
+              <button id="send" disabled>发送到桌面会话</button
+              ><button id="stop" class="danger" disabled>停止当前任务</button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <p class="privacy">
+        开发 relay
+        使用内存身份与绑定，重启后需重新配对。中转服务可读取聊天内容；TLS
+        不等于端到端加密。
+      </p>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
